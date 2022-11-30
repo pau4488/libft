@@ -6,11 +6,11 @@
 /*   By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 00:02:54 by pbrossa-          #+#    #+#             */
-/*   Updated: 2022/12/01 00:28:19 by pbrossa-         ###   ########.fr       */
+/*   Updated: 2022/12/01 00:57:25 by pbrossa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include    "libft.h"
+#include    "libft.h" LOL
 
 int ft_isalpha(int c)
 {
