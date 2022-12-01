@@ -2,5 +2,7 @@
     "C_Cpp.errorSquiggles": "Enabled",
     "files.associations": {
         "libft.h": "c"
-    }
+    },
+    "42header.username": "pbrossa-",
+    "42header.email": "pbrossa-@student.42.fr"
 }
