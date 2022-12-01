@@ -6,7 +6,7 @@
 /*   By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 23:04:29 by pbrossa-          #+#    #+#             */
-/*   Updated: 2022/12/01 00:15:34 by pbrossa-         ###   ########.fr       */
+/*   Updated: 2022/12/01 23:12:35 by pbrossa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,8 @@
 
 int ft_isalpha(int c);
 int ft_isdigit(int c);
+size_t  ft_strlen(const char *s);
+void    *ft_memset(void *s, int c, size_t len);
+void    *ft_memmove(void *dest, const void *src, size_t n);
 
 #endif
