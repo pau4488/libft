@@ -6,13 +6,13 @@
 /*   By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 20:34:55 by pbrossa-          #+#    #+#             */
-/*   Updated: 2022/12/01 20:34:55 by pbrossa-         ###   ########.fr       */
+/*   Updated: 2022/12/01 22:48:54 by pbrossa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include    "libft.h"
 
-void    ft_strlcpy(char *dst, const char *src, size_t n)
+void    ft_strlcpy(char *restrict dst, const char *restrict src, size_t n)
 {
 
 }
