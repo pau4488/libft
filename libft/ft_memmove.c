@@ -6,7 +6,7 @@
 /*   By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 20:05:29 by pbrossa-          #+#    #+#             */
-/*   Updated: 2022/12/02 00:21:08 by pbrossa-         ###   ########.fr       */
+/*   Updated: 2022/12/02 23:29:13 by pbrossa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,17 @@ void    *ft_memmove(void *dest, const void *src, size_t n)
     if (!dest && !src)
         return (NULL);
     srccpy = (unsigned char *)src;
-
-    while (i < n) {
-        ((unsigned char *)dest)[i] = srccpy[i];
-        i++;
+    if (dest < src){
+        while (i < n) {
+            ((unsigned char *)dest)[i] = srccpy[i];
+            i++;
+        }
+    }
+    else {
+        while (i < n) {
+            ((unsigned char *)dest)[n - 1] = srccpy[n - 1];
+            n--;
+        }
     }
 
     return (dest);

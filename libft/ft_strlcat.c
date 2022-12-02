@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/01 20:34:55 by pbrossa-          #+#    #+#             */
-/*   Updated: 2022/12/03 00:12:04 by pbrossa-         ###   ########.fr       */
+/*   Created: 2022/12/03 00:16:47 by pbrossa-          #+#    #+#             */
+/*   Updated: 2022/12/03 00:48:47 by pbrossa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include    "libft.h"
 
-size_t    ft_strlcpy(char *restrict dest, const char *restrict src, size_t n)
+size_t  ft_strlcat(char *restrict dest, const char *restrict src, size_t n)
 {
     size_t  i;
-    size_t  j;
+    size_t  cont;
 
     i = 0;
-    j = 0;
-    while (src[j] != '\0')
-		j++;
+    cont = 0;
+
+    while (dest[cont] != '\0')
+        cont++;
     if (n != 0){
-        while(src[i] != '\0' && i < (n - 1)){
-            dest[i] = src[i];
+        cont++;
+        while (cont < n){
+            dest[cont] = src[i];
             i++;
+            cont++;
         }
-        dest[i] = '\0';
+        dest [cont] = '\0';
     }
-    return (j);
+    return (cont);
 }
