@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/03 00:16:47 by pbrossa-          #+#    #+#             */
-/*   Updated: 2022/12/08 23:10:38 by pbrossa-         ###   ########.fr       */
+/*   Created: 2022/12/09 00:58:08 by pbrossa-          #+#    #+#             */
+/*   Updated: 2022/12/09 01:05:07 by pbrossa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include    "libft.h"
 
-size_t  ft_strlcat(char *dest, const char *src, size_t n)
+void    *ft_strrchr(const char *s, int c)
 {
-    size_t  i;
-    size_t  cont;
+    int i;
+    char    *aux;
 
     i = 0;
-    cont = 0;
+    *aux = "";
 
-    while (dest[cont] != '\0')
-        cont++;
-    if (n != 0){
-        cont++;
-        while (cont < n){
-            dest[cont] = src[i];
-            i++;
-            cont++;
-        }
-        dest [cont] = '\0';
+    if (!s)
+        return NULL;
+    while (s[i])
+    {
+        if (s[i] == c)
+            return ((char*)(s + i));
+        i++;
     }
-    return (cont);
+    if (s[i] == (char)c)
+		return ((char*)(s + i));
+    
+    return NULL;
 }

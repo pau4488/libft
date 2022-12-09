@@ -1,35 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/03 00:16:47 by pbrossa-          #+#    #+#             */
-/*   Updated: 2022/12/08 23:10:38 by pbrossa-         ###   ########.fr       */
+/*   Created: 2022/12/08 22:44:58 by pbrossa-          #+#    #+#             */
+/*   Updated: 2022/12/08 22:45:21 by pbrossa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include    "libft.h"
 
-size_t  ft_strlcat(char *dest, const char *src, size_t n)
+int ft_tolower(int c)
 {
-    size_t  i;
-    size_t  cont;
-
-    i = 0;
-    cont = 0;
-
-    while (dest[cont] != '\0')
-        cont++;
-    if (n != 0){
-        cont++;
-        while (cont < n){
-            dest[cont] = src[i];
-            i++;
-            cont++;
-        }
-        dest [cont] = '\0';
+    if  (c >= 'A' && c <= 'Z')
+    {
+        c += 32;
     }
-    return (cont);
+    return (c);
 }
