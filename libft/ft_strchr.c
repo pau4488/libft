@@ -6,7 +6,7 @@
 /*   By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 22:49:01 by pbrossa-          #+#    #+#             */
-/*   Updated: 2022/12/09 00:56:18 by pbrossa-         ###   ########.fr       */
+/*   Updated: 2022/12/09 01:27:14 by pbrossa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void    *ft_strchr(const char *s, int c)
         return NULL;
     while (s[i])
     {
-        if (s[i] == c)
+        if (s[i] == (char)c)
             return ((char*)(s + i));
         i++;
     }
