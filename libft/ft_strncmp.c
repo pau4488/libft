@@ -6,7 +6,20 @@
 /*   By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 01:44:57 by pbrossa-          #+#    #+#             */
-/*   Updated: 2022/12/09 01:45:47 by pbrossa-         ###   ########.fr       */
+/*   Updated: 2022/12/09 02:04:10 by pbrossa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include    "libft.h"
+
+int strncmp(const char *s1, const char *s2, size_t n)
+{
+    int i;
+
+    i = 0;
+
+    while (s1[i] == s2[i])
+    {
+        
+    }
+}
