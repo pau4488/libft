@@ -6,7 +6,7 @@
 /*   By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 03:37:47 by pbrossa-          #+#    #+#             */
-/*   Updated: 2022/12/09 04:09:41 by pbrossa-         ###   ########.fr       */
+/*   Updated: 2022/12/09 23:15:44 by pbrossa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char    *ft_strnstr(const char *haystack, const char *needle, size_t len)
     nlen = 0;
 
     if (!needle)
-        return (haystack);
+        return ((char *)haystack[0]);
     nlen = ft_strlen(needle);
     while(i < len && j < nlen)
     {

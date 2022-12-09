@@ -4,16 +4,12 @@
 
 int main(void)
 {
-    char    dest[100] = "Hola Buenas que tal";
-    char    src[100] = "Adeu que vagi be";
+    char    haystack[100] = "Hola Buenas que tal";
+    char    needle[100] = "Buenas";
     char    *destcpy;
     char    *srccpy;
     char    *aux;
     char    *aux2;
-
-    srccpy = src;
-    destcpy = dest;
-    aux2 = "Hello World!";
 
     // len = ft_strlen(s);
     // printf("ft_strlen: %zu\n", len);
@@ -30,8 +26,10 @@ int main(void)
     // ft_strlcat (destcpy, srccpy, 0);
     // printf("ft_strlcat: %s\n", destcpy);
 
-    aux = ft_strrchr("", 87);
-    printf("\nEso es:\n%s\n", aux);
+    aux = ft_strnstr(haystack, "", 20);
+    aux2 = strnstr(haystack, "", 20);
+    printf("\nft_strnstr:\n%s\n", aux);
+    printf("\nstrnstr:\n%s\n", aux2);
 
     return 0;
 }
