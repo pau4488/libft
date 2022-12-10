@@ -6,7 +6,7 @@
 /*   By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 01:28:44 by pbrossa-          #+#    #+#             */
-/*   Updated: 2022/12/10 21:38:48 by pbrossa-         ###   ########.fr       */
+/*   Updated: 2022/12/10 21:50:09 by pbrossa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,10 @@
 int ft_atoi(const char *str)
 {
 	int	flag;
+	int	res;
 
 	flag = 1;
+	res = 0;
 
     while (ft_isspace(*str))
 		str++;
@@ -28,9 +30,10 @@ int ft_atoi(const char *str)
 	}
 	while (ft_isdigit(*str))
 	{
-		
+		res = res * 10 + (*str - 48);
 		str++;
 	}
+	return (res * flag);
 }
 
 static int	ft_isspace(int c)
