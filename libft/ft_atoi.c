@@ -6,11 +6,14 @@
 /*   By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 01:28:44 by pbrossa-          #+#    #+#             */
-/*   Updated: 2022/12/10 21:50:09 by pbrossa-         ###   ########.fr       */
+/*   Updated: 2022/12/10 21:52:01 by pbrossa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include    "libft.h"
+
+static int	ft_isspace(int c);
+static int	ft_issign(int c);
 
 int ft_atoi(const char *str)
 {
