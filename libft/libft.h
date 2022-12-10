@@ -6,7 +6,7 @@
 /*   By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 23:04:29 by pbrossa-          #+#    #+#             */
-/*   Updated: 2022/12/09 04:10:22 by pbrossa-         ###   ########.fr       */
+/*   Updated: 2022/12/10 01:30:07 by pbrossa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ void    *ft_strrchr(const char *s, int c);
 void    *ft_memchr(const void *s, int c, size_t n);
 int ft_memcmp(const void *s1, const void *s2, size_t n);
 char    *ft_strnstr(const char *haystack, const char *needle, size_t len);
+int ft_atoi(const char *str);
 
 #endif

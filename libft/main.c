@@ -5,11 +5,14 @@
 int main(void)
 {
     char    haystack[100] = "Hola Buenas que tal";
-    char    needle[100] = "Buenas";
+    char    needle[100] = "878";
     char    *destcpy;
     char    *srccpy;
     char    *aux;
     char    *aux2;
+    int     i;
+
+    i = 0;
 
     // len = ft_strlen(s);
     // printf("ft_strlen: %zu\n", len);
@@ -26,10 +29,13 @@ int main(void)
     // ft_strlcat (destcpy, srccpy, 0);
     // printf("ft_strlcat: %s\n", destcpy);
 
-    aux = ft_strnstr(haystack, needle, 20);
-    aux2 = strnstr(haystack, needle, 20);
-    printf("\nft_strnstr:\n%s\n", aux);
-    printf("\nstrnstr:\n%s\n", aux2);
+    // aux = ft_strnstr(haystack, needle, 20);
+    // aux2 = strnstr(haystack, needle, 20);
+    // printf("\nft_strnstr:\n%s\n", aux);
+    // printf("\nstrnstr:\n%s\n", aux2);
+
+    i = atoi(needle);
+    printf("\nAtoi: %i\n", i);
 
     return 0;
 }
