@@ -6,16 +6,19 @@
 /*   By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 23:04:29 by pbrossa-          #+#    #+#             */
-/*   Updated: 2022/12/10 01:30:07 by pbrossa-         ###   ########.fr       */
+/*   Updated: 2022/12/10 21:25:49 by pbrossa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#define LIBFT_H
+# define LIBFT_H
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <stdio.h>
+
+# define TRUE	(int)1
+# define FALSE	(int)0
 
 int ft_isalpha(int c);
 int ft_isdigit(int c);

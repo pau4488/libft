@@ -34,7 +34,7 @@ int main(void)
     // printf("\nft_strnstr:\n%s\n", aux);
     // printf("\nstrnstr:\n%s\n", aux2);
 
-    i = atoi(needle);
+    i = atoi("");
     printf("\nAtoi: %i\n", i);
 
     return 0;
