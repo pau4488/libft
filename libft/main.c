@@ -26,8 +26,8 @@ int main(void)
     // ft_strlcat (destcpy, srccpy, 0);
     // printf("ft_strlcat: %s\n", destcpy);
 
-    aux = ft_strnstr(haystack, "", 20);
-    aux2 = strnstr(haystack, "", 20);
+    aux = ft_strnstr(haystack, needle, 20);
+    aux2 = strnstr(haystack, needle, 20);
     printf("\nft_strnstr:\n%s\n", aux);
     printf("\nstrnstr:\n%s\n", aux2);
 

@@ -6,7 +6,7 @@
 /*   By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 03:37:47 by pbrossa-          #+#    #+#             */
-/*   Updated: 2022/12/09 23:15:44 by pbrossa-         ###   ########.fr       */
+/*   Updated: 2022/12/10 01:24:54 by pbrossa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,24 @@
 
 char    *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-    int i;
-    int j;
-    int nlen;
-    int aux;
+    size_t	i;
+	size_t	j;
 
-    i = 0;
-    j = 0;
-    aux = 0;
-    nlen = 0;
-
-    if (!needle)
-        return ((char *)haystack[0]);
-    nlen = ft_strlen(needle);
-    while(i < len && j < nlen)
-    {
-        if (needle[i] == haystack[i])
-        {
-            if (aux == 0)
-                aux = i;
-            j++;
-        }
-        else
-            aux = 0;
-            j = 0;
-        i++;
-    }
-    if (j == nlen)
-        return ((char *)haystack[aux]);
+	i = 0;
+	if (needle[0] == '\0')
+		return ((char *)haystack);
+	while (haystack[i] != '\0')
+	{
+		j = 0;
+		while (haystack[i + j] == needle[j] && (i + j) < len)
+		{
+			if (haystack[i + j] == '\0' && needle[j] == '\0')
+				return ((char *)&haystack[i]);
+			j++;
+		}
+		if (needle[j] == '\0')
+			return ((char *)&haystack[i]);
+		i++;
+	}
     return NULL;
 }
