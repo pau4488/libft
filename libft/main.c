@@ -10,9 +10,10 @@ int main(void)
     char    *srccpy;
     char    *aux;
     char    *aux2;
+    char    c;
     int     i;
 
-    i = 0;
+    i = 49;
 
     // len = ft_strlen(s);
     // printf("ft_strlen: %zu\n", len);
@@ -34,8 +35,10 @@ int main(void)
     // printf("\nft_strnstr:\n%s\n", aux);
     // printf("\nstrnstr:\n%s\n", aux2);
 
-    i = atoi("");
-    printf("\nAtoi: %i\n", i);
+    // i = atoi("");
+    // printf("\nAtoi: %i\n", i);
+
+    printf("\n%c\n", i);
 
     return 0;
 }
