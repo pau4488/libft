@@ -6,7 +6,7 @@
 /*   By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 22:50:48 by pbrossa-          #+#    #+#             */
-/*   Updated: 2022/12/11 23:22:15 by pbrossa-         ###   ########.fr       */
+/*   Updated: 2022/12/12 00:20:00 by pbrossa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 void ft_putnbr_fd(int n, int fd)
 {
-	char[9] str = '\0';
+	long	nl;
 
-
-	if(n < 0)
+	nl = n;
+	if(nl < 0)
 	{
-		write(fd, '-', 1);
-		n *= -1;
+		write(fd, "-", 1);
+		nl = -nl;
 	}
-	while(n >= 10)
+	if(nl >= 10)
 	{
-		ft_putchar_fd((char)n, fd);
+		ft_putnbr_fd(nl / 10, fd);
 	}
-	ft_putchar_fd('0' + n, fd);
+	ft_putchar_fd("0123456789"[nl % 10], fd);
 }

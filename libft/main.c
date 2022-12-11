@@ -38,7 +38,7 @@ int main(void)
     // i = atoi("");
     // printf("\nAtoi: %i\n", i);
 
-    printf("\n%c\n", i);
+    ft_putnbr_fd(-1024,1);
 
     return 0;
 }
