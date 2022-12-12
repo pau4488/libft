@@ -51,21 +51,19 @@ SRCS	=	ft_isalpha.c \
 
 OBJS	=	$(SRCS:.c=.o)
 
-CC		=	gcc
-
 RM		=	rm -rf
 
 LIBC	=	ar -rcs
 
-FLAGS	=	-Wall -Wextra -Werror
+CFLAGS	=	-Wall -Wextra -Werror
 
 %.o: %.c ${HEADER}
-	${CC} ${FLAGS} -c $< -o $@
+	${CC} ${CFLAGS} -c $< -o $@
+
+all:		$(NAME)
 
 $(NAME):	${OBJS} ${HEADER}
 			$(LIBC) $(NAME) $(OBJS)
-
-all:		$(NAME)
 
 fclean:		clean
 			$(RM) $(NAME)
