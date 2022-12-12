@@ -6,11 +6,11 @@
 /*   By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 19:51:10 by pbrossa-          #+#    #+#             */
-/*   Updated: 2022/12/12 01:43:18 by pbrossa-         ###   ########.fr       */
+/*   Updated: 2022/12/12 02:10:02 by pbrossa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include    "libft.h"
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

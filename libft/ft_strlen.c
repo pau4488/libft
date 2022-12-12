@@ -6,11 +6,11 @@
 /*   By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 00:40:19 by pbrossa-          #+#    #+#             */
-/*   Updated: 2022/12/12 01:55:17 by pbrossa-         ###   ########.fr       */
+/*   Updated: 2022/12/12 02:10:40 by pbrossa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include    "libft.h"
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

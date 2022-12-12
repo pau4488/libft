@@ -6,11 +6,11 @@
 /*   By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 01:28:44 by pbrossa-          #+#    #+#             */
-/*   Updated: 2022/12/12 01:34:56 by pbrossa-         ###   ########.fr       */
+/*   Updated: 2022/12/12 02:08:35 by pbrossa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include    "libft.h"
+#include "libft.h"
 
 static int	ft_isspace(int c);
 static int	ft_issign(int c);
