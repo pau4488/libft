@@ -6,77 +6,49 @@
 /*   By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 12:50:37 by pbrossa-          #+#    #+#             */
-/*   Updated: 2022/12/12 12:51:22 by pbrossa-         ###   ########.fr       */
+/*   Updated: 2022/12/12 22:51:21 by pbrossa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		digit_counter(int n)
+static void	ft_len_magnitude(int n, int *len, int *mag)
 {
-	int i;
-	int	copy;
-
-	i = 0;
-	if (n == 0)
-		return (1);
-	if (n == -2147483648)
-		return (11);
-	if (n < 0)
+	*len = 1;
+	if (n >= 0)
 	{
+		*len = 0;
 		n = -n;
-		i++;
 	}
-	copy = n;
-	while (copy > 0)
+	*mag = 1;
+	while (n / *mag < -9)
 	{
-		copy = copy / 10;
-		i++;
+		*mag *= 10;
+		*len += 1;
 	}
-	return (i);
-}
-
-int		exp_counter(int n)
-{
-	int exp;
-	int	digits;
-
-	if (n == 0)
-		return (1);
-	if (n == -2147483648)
-		return (1000000000);
-	digits = digit_counter(n);
-	if (n < 0)
-		digits--;
-	exp = 1;
-	while (--digits)
-		exp = exp * 10;
-	return (exp);
 }
 
 char	*ft_itoa(int n)
 {
-	char		*str;
-	int			exp;
-	int			i;
-	long int	copy;
+	int		len;
+	int		mag;
+	int		i;
+	char	*new;
 
-	copy = (long int)n;
-	exp = exp_counter(n);
-	i = 0;
-	if (!(str = malloc(digit_counter(n) + 1)))
+	ft_len_magnitude(n, &len, &mag);
+	new = (char *)malloc(sizeof(char) * (len + 2));
+	if (!new)
 		return (NULL);
+	i = 0;
 	if (n < 0)
+		new[i++] = '-';
+	if (n > 0)
+		n = -n;
+	while (mag >= 1)
 	{
-		str[i++] = '-';
-		copy = -copy;
+		new[i++] = -((n / mag) % 10) + 48;
+		mag /= 10;
 	}
-	while (exp > 0)
-	{
-		str[i++] = (copy / exp) + 48;
-		copy = copy % exp;
-		exp = exp / 10;
-	}
-	str[i] = '\0';
-	return (str);
+	new[i] = '\0';
+	return (new);
 }
