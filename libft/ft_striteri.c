@@ -6,7 +6,7 @@
 /*   By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 00:37:32 by pbrossa-          #+#    #+#             */
-/*   Updated: 2022/12/12 01:26:38 by pbrossa-         ###   ########.fr       */
+/*   Updated: 2022/12/12 23:16:18 by pbrossa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < ft_strlen(s))

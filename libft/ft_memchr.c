@@ -6,7 +6,7 @@
 /*   By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 02:11:55 by pbrossa-          #+#    #+#             */
-/*   Updated: 2022/12/12 02:09:52 by pbrossa-         ###   ########.fr       */
+/*   Updated: 2022/12/12 23:15:18 by pbrossa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < n)

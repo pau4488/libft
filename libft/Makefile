@@ -59,9 +59,10 @@ LIBC	=	ar -rcs
 
 FLAGS	=	-Wall -Wextra -Werror
 
-.c.o${HEADER} :		${CC} ${FLAGS} -c $< -o ${<:.c=.o}
+%.o: %.c ${HEADER}
+	${CC} ${FLAGS} -c $< -o $@
 
-$(NAME):	${OBJS}
+$(NAME):	${OBJS} ${HEADER}
 			$(LIBC) $(NAME) $(OBJS)
 
 all:		$(NAME)

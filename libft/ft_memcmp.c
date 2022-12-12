@@ -6,7 +6,7 @@
 /*   By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 02:26:30 by pbrossa-          #+#    #+#             */
-/*   Updated: 2022/12/12 02:09:58 by pbrossa-         ###   ########.fr       */
+/*   Updated: 2022/12/12 23:15:54 by pbrossa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	if (n == 0)
