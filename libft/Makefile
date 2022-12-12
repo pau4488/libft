@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 NAME	=	libft.a
-
+HEADER	=	libft.h
 SRCS	=	ft_isalpha.c \
 			ft_isdigit.c \
 			ft_isalnum.c \
@@ -53,7 +53,7 @@ LIBC	=	ar -rcs
 
 FLAGS	=	-Wall -Wextra -Werror
 
-.c.o :		${CC} ${FLAGS} -c $< -o ${<:.c=.o}
+.c.o${HEADER} :		${CC} ${FLAGS} -c $< -o ${<:.c=.o}
 
 $(NAME):	${OBJS}
 			$(LIBC) $(NAME) $(OBJS)
