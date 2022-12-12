@@ -6,13 +6,13 @@
 /*   By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 00:35:40 by pbrossa-          #+#    #+#             */
-/*   Updated: 2022/12/01 00:54:39 by pbrossa-         ###   ########.fr       */
+/*   Updated: 2022/12/12 01:38:41 by pbrossa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include    "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    return (c >= 32 && c <= 126);
+	return (c >= 32 && c <= 126);
 }

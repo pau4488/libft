@@ -6,23 +6,23 @@
 /*   By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 22:50:48 by pbrossa-          #+#    #+#             */
-/*   Updated: 2022/12/12 00:20:00 by pbrossa-         ###   ########.fr       */
+/*   Updated: 2022/12/12 01:48:34 by pbrossa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	long	nl;
 
 	nl = n;
-	if(nl < 0)
+	if (nl < 0)
 	{
 		write(fd, "-", 1);
 		nl = -nl;
 	}
-	if(nl >= 10)
+	if (nl >= 10)
 	{
 		ft_putnbr_fd(nl / 10, fd);
 	}

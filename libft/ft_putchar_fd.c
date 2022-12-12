@@ -6,13 +6,13 @@
 /*   By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 21:52:11 by pbrossa-          #+#    #+#             */
-/*   Updated: 2022/12/11 22:25:33 by pbrossa-         ###   ########.fr       */
+/*   Updated: 2022/12/12 01:47:24 by pbrossa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
