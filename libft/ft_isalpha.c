@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/01 00:02:54 by pbrossa-          #+#    #+#             */
-/*   Updated: 2022/12/12 02:09:15 by pbrossa-         ###   ########.fr       */
+/*   Created: 2022/12/14 19:09:01 by pbrossa-          #+#    #+#             */
+/*   Updated: 2022/12/14 19:47:34 by pbrossa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,21 @@
 
 int	ft_isalpha(int c)
 {
-	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
+	if(ft_isupper || ft_islower)
+		return(1);
+	return(0);
+}
+
+int	ft_isupper(int c)
+{
+	if(c >= 65 && c <= 90)
+		return(1);
+	return(0);
+}
+
+int	ft_islower(int c)
+{
+	if(c >= 97 && c <= 122)
+		return(1);
+	return(0);
 }
