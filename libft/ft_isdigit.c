@@ -6,13 +6,15 @@
 /*   By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 02:25:14 by pbrossa-          #+#    #+#             */
-/*   Updated: 2023/01/14 02:31:24 by pbrossa-         ###   ########.fr       */
+/*   Updated: 2023/01/14 22:27:46 by pbrossa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit()
+int	ft_isdigit(int c)
 {
-	return 0;
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
 }

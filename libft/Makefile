@@ -6,14 +6,15 @@
 #    By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/14 02:09:51 by pbrossa-          #+#    #+#              #
-#    Updated: 2023/01/14 02:25:12 by pbrossa-         ###   ########.fr        #
+#    Updated: 2023/01/14 22:32:37 by pbrossa-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	libf.a
+NAME	=	libft.a
 
 FILES	=	ft_isalpha.c \
-			ft_isdigit.c
+			ft_isdigit.c \
+			ft_isalnum.c
 
 OBJS	=	$(FILES:.c=.o)
 
