@@ -1,12 +1,36 @@
-FILES := ft_isalpha.c
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/01/14 02:09:51 by pbrossa-          #+#    #+#              #
+#    Updated: 2023/01/14 02:25:12 by pbrossa-         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-CC		= gcc
-CFLAGS	= -Wall -Werror -Wextra
+NAME	=	libf.a
 
+FILES	=	ft_isalpha.c \
+			ft_isdigit.c
+
+OBJS	=	$(FILES:.c=.o)
+
+CC		=	gcc
+
+LIBC	=	ar -rcs
+
+FLAGS	=	-Wall -Werror -Wextra
+
+.c.o:
+	$(CC) $(FLAGS) -c $< -o ${<:.c=.o}
+
+all: $(OBJS)
+	$(LIBC) $(NAME) $(OBJS)
 
 fclean: clean
-	
-clean:
-	rm -f *.o
+	rm -f $(NAME)
 
-libft.h:
+clean:
+	rm -f $(OBJS)
