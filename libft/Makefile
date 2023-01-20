@@ -6,7 +6,7 @@
 #    By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/14 02:09:51 by pbrossa-          #+#    #+#              #
-#    Updated: 2023/01/19 22:26:49 by pbrossa-         ###   ########.fr        #
+#    Updated: 2023/01/20 00:43:16 by pbrossa-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,10 @@ FILES	=	ft_isalpha.c \
 			ft_strlen.c \
 			ft_memset.c \
 			ft_memcpy.c \
-			ft_memmove.c
+			ft_memmove.c \
+			ft_strlen.c \
+			ft_strlcpy.c \
+			ft_strlcat.c
 
 OBJS	=	$(FILES:.c=.o)
 
