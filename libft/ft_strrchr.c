@@ -1,39 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/20 00:23:36 by pbrossa-          #+#    #+#             */
-/*   Updated: 2023/01/20 01:05:13 by pbrossa-         ###   ########.fr       */
+/*   Created: 2023/01/25 20:24:53 by pbrossa-          #+#    #+#             */
+/*   Updated: 2023/01/25 20:24:53 by pbrossa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+char	*ft_strrchr(const char *s, int c)
 {
-	size_t	c;
-	size_t	i;
-	int		j;
+	int		i;
 
-	c = ft_strlen(dst) + ft_strlen(src);
-	i = 0;
-	j = 0;
-	if (dstsize != 0 && ft_strlen(dst) < dstsize)
+	i = ft_strlen(s);
+	while (i >= 0)
 	{
-		i = ft_strlen(dst);
-		while (i < (dstsize - 1))
+		if (s[i] == (char)c)
 		{
-			dst[i] = src[j];
-			i++;
-			j++;
+			return (&((char *)s)[i]);
 		}
-		dst[i] = '\0';
+		i--;
 	}
-	if (dstsize < ft_strlen(dst))
-		return (dstsize + ft_strlen(src));
-	else
-		return (c);
+	return (NULL);
 }
