@@ -6,20 +6,23 @@
 /*   By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 20:26:06 by pbrossa-          #+#    #+#             */
-/*   Updated: 2023/02/13 20:26:06 by pbrossa-         ###   ########.fr       */
+/*   Updated: 2023/02/22 01:35:42 by pbrossa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	s_len;
-	char	*ptr;
+	char	*sub;
 
-	s_len = ft_strlen(s);
-	malloc (len * sizeof(char));
-	if (!ptr)
-		return (0);
-	return (ptr);
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
+	if (len > ft_strlen(s))
+		len = ft_strlen(s) - start;
+	sub = ft_calloc(len + 1, sizeof(char));
+	if (!sub)
+		return (NULL);
+	ft_memcpy(sub, &s[start], len);
+	return (sub);
 }

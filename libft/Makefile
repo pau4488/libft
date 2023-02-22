@@ -6,7 +6,7 @@
 #    By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/14 02:09:51 by pbrossa-          #+#    #+#              #
-#    Updated: 2023/02/10 00:16:19 by pbrossa-         ###   ########.fr        #
+#    Updated: 2023/02/22 00:14:54 by pbrossa-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,20 +35,21 @@ FILES	=	ft_isalpha.c \
 			ft_strnstr.c \
 			ft_atoi.c \
 			ft_calloc.c \
-			ft_strdup.c
+			ft_strdup.c \
+			ft_substr.c
 
 OBJS	=	$(FILES:.c=.o)
-
-CC		=	gcc
 
 rm		=	rm -f
 
 LIBC	=	ar -rcs
 
-FLAGS	=	-Wall -Werror -Wextra
+CFLAGS	=	-Wall -Werror -Wextra
 
-.c.o:
-	$(CC) $(FLAGS) -c $< -o ${<:.c=.o}
+INCLUDE	= -I./
+
+%.o: %.c
+	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 
 $(NAME): $(OBJS)
 	$(LIBC) $(NAME) $(OBJS)
