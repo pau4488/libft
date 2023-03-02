@@ -6,7 +6,7 @@
 #    By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/14 02:09:51 by pbrossa-          #+#    #+#              #
-#    Updated: 2023/02/23 00:58:28 by pbrossa-         ###   ########.fr        #
+#    Updated: 2023/03/02 18:28:41 by pbrossa-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,11 @@ FILES	=	ft_isalpha.c \
 			ft_strdup.c \
 			ft_substr.c \
 			ft_strjoin.c \
-			ft_strtrim.c
+			ft_strtrim.c \
+			ft_putchar_fd.c \
+			ft_putstr_fd.c \
+			ft_putendl_fd.c \
+			ft_putnbr_fd.c
 
 OBJS	=	$(FILES:.c=.o)
 

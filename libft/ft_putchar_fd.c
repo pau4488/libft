@@ -1,33 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/22 22:44:36 by pbrossa-          #+#    #+#             */
-/*   Updated: 2023/02/27 21:26:27 by pbrossa-         ###   ########.fr       */
+/*   Created: 2023/03/02 17:37:15 by pbrossa-          #+#    #+#             */
+/*   Updated: 2023/03/02 17:57:02 by pbrossa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+void	ft_putchar_fd(char c, int fd)
 {
-	char	*trmd;
-	int		len;
-
-	len = ft_strlen(s1);
-	trmd = malloc(ft_strlen(s1) * sizeof(char));
-	if (!trmd)
-		return (NULL);
-	while (ft_strchr(set, *s1))
-		s1++;
-	while (ft_strrchr(set, s1[len - 1]))
-		len--;
-	if (len > 0)
-		trmd = ft_substr(s1, 0, len);
-	if (trmd)
-		return (trmd);
-	return (NULL);
+	write (fd, &c, 1);
 }
