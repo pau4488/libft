@@ -28,7 +28,7 @@ char	ft_itoa(int n)
 		i++;
 	}
 	ft_itoa(n / 10);
-	str[i] =
+	//str[i] =
 	return (str);
 }
 
