@@ -6,7 +6,7 @@
 #    By: pbrossa- <pbrossa-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/14 02:09:51 by pbrossa-          #+#    #+#              #
-#    Updated: 2023/03/02 18:28:41 by pbrossa-         ###   ########.fr        #
+#    Updated: 2023/03/09 22:30:35 by pbrossa-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,8 @@ FILES	=	ft_isalpha.c \
 			ft_strjoin.c \
 			ft_strtrim.c \
 			ft_split.c \
+			ft_strmapi.c \
+			ft_striteri.c \
 			ft_putchar_fd.c \
 			ft_putstr_fd.c \
 			ft_putendl_fd.c \
