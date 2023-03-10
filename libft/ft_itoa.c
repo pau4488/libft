@@ -12,24 +12,62 @@
 
 #include "libft.h"
 
-char	ft_itoa(int n)
-{
-	char	*str;
-	int		len;
-	int		i;
+static char *ft_strrev(char *str);
 
-	i = 0;
-	len = ft_strlen(n + '0');
-	str = malloc(len * sizeof(char));
+char	*ft_itoa(int n)
+{
+    char    *str;
+    char    *ret;
+    int     i;
+    int     flag;
+
+    i = 0;
+    flag = 0;
+    str = malloc(100 * sizeof(char));
 	if (n < 0)
-	{
-		str[0] = '-';
-		n = -n;
-		i++;
-	}
-	ft_itoa(n / 10);
-	//str[i] =
-	return (str);
+    {
+        flag = 1;
+        n = -n;
+    }
+    else if (n == 0)
+    {
+        str[i++] = '0';
+        str[i] = '\0';
+        return (str);
+    }
+    while ((n / 10) > 0)
+    {
+        str[i] = n % 10 + '0';
+        n /= 10;
+        i++;
+    }
+    if (n > 0)
+        str[i++] = n + '0';
+    str[i] = '\0';
+    ret = ft_strrev(str);
+    if (flag)
+        ret = -ret;
+    return (ret);
+}
+
+static char *ft_strrev(char *str)
+{
+    char    temp;
+    size_t     i;
+    size_t     j;
+
+    temp = ' ';
+    i = 0;
+    j = ft_strlen(str) - 1;
+    while (i < ft_strlen(str) - 1 && i < j)
+    {
+        temp = str[i];
+        str[i] = str[j];
+        str[j] = temp;
+        i++;
+        j--;
+    }
+    return (str);
 }
 
 //Passar per Python C debugger online

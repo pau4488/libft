@@ -25,21 +25,4 @@ void	ft_putnbr_fd(int nbr, int fd)
 	if (n >= 10)
 		ft_putnbr_fd(n / 10, fd);
 	write(fd, &"0123456789"[n % 10], 1);
-	
-
-	// int		ncpy;
-
-	// ncpy = n;
-	// if (ncpy < 0)
-	// {
-	// 	ft_putchar_fd ('-', fd);
-	// 	ncpy = -ncpy;
-	// }
-	// if (ncpy > 9)
-	// {
-	// 	ft_putnbr_fd (ncpy / 10, fd);
-	// 	ft_putchar_fd (ncpy % 10 + '0', fd);
-	// }
-	// else
-	// 	ft_putchar_fd (ncpy + '0', fd);
 }
