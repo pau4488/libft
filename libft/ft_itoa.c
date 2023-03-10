@@ -17,16 +17,14 @@ static char *ft_strrev(char *str);
 char	*ft_itoa(int n)
 {
     char    *str;
-    char    *ret;
     int     i;
-    int     flag;
 
     i = 0;
-    flag = 0;
     str = malloc(100 * sizeof(char));
 	if (n < 0)
     {
-        flag = 1;
+        str[i] = '-';
+        i++;
         n = -n;
     }
     else if (n == 0)
@@ -44,10 +42,7 @@ char	*ft_itoa(int n)
     if (n > 0)
         str[i++] = n + '0';
     str[i] = '\0';
-    ret = ft_strrev(str);
-    if (flag)
-        ret = -ret;
-    return (ret);
+    return (ft_strrev(str));
 }
 
 static char *ft_strrev(char *str)
@@ -59,6 +54,8 @@ static char *ft_strrev(char *str)
     temp = ' ';
     i = 0;
     j = ft_strlen(str) - 1;
+    if (str[i] == '-')
+        i++;
     while (i < ft_strlen(str) - 1 && i < j)
     {
         temp = str[i];
